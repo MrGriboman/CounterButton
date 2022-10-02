@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CounterButton</string>
     <string name="_0">0</string>
-    <string name="_1">+1</string>
+    <string name="plus1">+1</string>
+    <string name="reset">Reset</string>
+    <string name="minus1">-1</string>
 </resources>

@@ -15,6 +15,13 @@ class MainActivity : AppCompatActivity() {
                 val newValue = tvCount.text.toString().toInt() + 1
                 tvCount.text = newValue.toString()
             }
+            btnMinusOne.setOnClickListener {
+                val newValue = tvCount.text.toString().toInt() - 1
+                tvCount.text = newValue.toString()
+            }
+            btnReset.setOnClickListener {
+                tvCount.text = 0.toString()
+            }
         }
     }
 }
