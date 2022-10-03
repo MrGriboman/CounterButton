@@ -4,4 +4,5 @@
     <string name="plus1">+1</string>
     <string name="reset">Reset</string>
     <string name="minus1">-1</string>
+    <string name="go_to_the_second_activity">Go to the second activity</string>
 </resources>

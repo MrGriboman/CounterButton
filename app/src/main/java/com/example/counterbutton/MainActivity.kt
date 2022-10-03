@@ -1,5 +1,6 @@
 package com.example.counterbutton
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.counterbutton.databinding.ActivityMainBinding
@@ -21,6 +22,12 @@ class MainActivity : AppCompatActivity() {
             }
             btnReset.setOnClickListener {
                 tvCount.text = 0.toString()
+            }
+            btnSecondActivity.setOnClickListener {
+                Intent(this@MainActivity, SecondActivity::class.java).also {
+                    it.putExtra("counterValue", tvCount.text.toString().toInt())
+                    startActivity(it)
+                }
             }
         }
     }
