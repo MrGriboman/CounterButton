@@ -16,9 +16,16 @@ class SecondActivity : AppCompatActivity() {
         val counterValue = intent.getIntExtra("counterValue", 0)
         binding.tvNumber.text = (0..counterValue).random().toString()
 
-        val rnd = Random()
-        val textColor = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
-        binding.tvNumber.setTextColor(textColor)
+        binding.tvNumber.setTextColor(randomColor())
+    }
 
+    private fun randomColor(): Int {
+        val rnd = Random()
+        return Color.argb(
+            255,
+            rnd.nextInt(256),
+            rnd.nextInt(256),
+            rnd.nextInt(256)
+        )
     }
 }

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 tvCount.text = 0.toString()
             }
             btnSecondActivity.setOnClickListener {
-                Intent(this@MainActivity, SecondActivity::class.java).also {
+                Intent(this@MainActivity, SecondActivity::class.java).let {
                     it.putExtra("counterValue", tvCount.text.toString().toInt())
                     startActivity(it)
                 }
